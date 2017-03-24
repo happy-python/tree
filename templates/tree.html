@@ -1,0 +1,42 @@
+{% load staticfiles %}
+{% load mptt_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django 树形结构</title>
+    <link rel="stylesheet" href="{% static "css/css.css" %}"/>
+    <script src="{% static "js/jquery-1.11.2.min.js" %}"></script>
+    <script src="{% static "js/SimpleTree.js" %}"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".framework_nav").SimpleTree({
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="framework_nav">
+        <ul>
+            <li class="all">
+                <a href="#">省/市/地区(县)</a>
+            </li>
+            <ul show="true">
+                {% recursetree nodes %}
+                    <li>
+                        {% if node.is_leaf_node %}
+                            <li><a href="#">{{ node.name }}</a></li>
+                        {% else %}
+                            <li><a href="#">{{ node.name }}</a></li>
+                            <ul>
+                                <li><a href="#">{{ children }}</a></li>
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endrecursetree %}
+            </ul>
+        </ul>
+    </div>
+</body>
+</html>

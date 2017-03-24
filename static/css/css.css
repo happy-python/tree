@@ -1,0 +1,44 @@
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.framework_nav li {
+    line-height: 48px;
+    padding: 0 0 0 25px;
+}
+
+.framework_nav ul ul {
+    padding: 0 0 0 25px;
+}
+
+.framework_nav a {
+    display: block; color: #000;
+}
+
+.framework_nav .folder {
+    background:url(../img/jt_r_g.png) 5px center no-repeat;
+}
+
+.framework_nav .open {
+    background:url(../img/jt_b_g.png) 5px center no-repeat;
+}
+
+.framework_nav .all {
+    background-color:#00A0E8;
+}
+
+.framework_nav .all a {
+    color: #fff;
+}
+
+.framework_nav .cur {
+    background-color:#00A0E8;
+}
+
+.framework_nav .cur a {
+    color: #fff;
+}

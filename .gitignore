@@ -1,0 +1,7 @@
+.idea
+*.py[cod]
+*$py.class
+
+# virtualenv
+venv/
+ENV/
