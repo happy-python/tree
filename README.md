@@ -1,1 +1,1 @@
-Django 树形结构
+使用 Django mptt 实现树形结构
